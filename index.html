@@ -1,1 +1,32 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://flow-space.github.io/style.css">
+  <title>Your Website</title>
+</head>
+<body>
+  <header>
+    <h1>Your Website Title</h1>
+    <p>Small Info Text Here</p>
+  </header>
+  <nav id="sidebar">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <!-- Add more links as needed -->
+    </ul>
+  </nav>
+  <div class="content">
+    <!-- Your main content goes here -->
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
