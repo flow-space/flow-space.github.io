@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://flow-space.github.io/style.css">
+    <title>Your Website</title>
+</head>
+<body>
+    <header>
+        <h1>Flow Space</h1>
+        <h2><a href="https://flow-space.github.io/">Home</a></h2>
+        <h3><!--<a href="">Student Login</a><a href="">Subscribe</a>--></h3>
+        <p>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/homeroom/index.html">Homeroom</a></button>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/english/index.html">English</a></button>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/maths/index.html">Maths</a></button>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/science/index.html">Science</a></button>
+        </p>
+      <h3>English</h3>
+    </header>
+    <nav id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li><!-- Add more links as needed -->
+        </ul>
+    </nav>
+    <div class="content"><!-- Your main content goes here --></div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
