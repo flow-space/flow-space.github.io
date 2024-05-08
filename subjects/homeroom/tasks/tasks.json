@@ -1,0 +1,12 @@
+const tasksData = [
+      {
+        "Class": "Math",
+        "Task": "Area, Perimeter...",
+        "DueDate": "10/05/2024"
+      },
+      {
+        "Class": "English",
+        "Task": "bookname book study",
+        "DueDate": "n/a"
+      }
+    ];
