@@ -53,3 +53,17 @@ ul li a {
   padding: 20px;
   transition: all 0.3s;
 }
+
+
+        .section-button {
+            background-color: #EEEEEE;
+            padding: 8px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        #english-content, #maths-content, #science-content {
+            display: none;
+        }
