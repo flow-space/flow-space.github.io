@@ -2,16 +2,19 @@
   {
     "Class": "Math",
     "Task": "Area, Perimeter...",
-    "DueDate": "10/05/2024"
+    "DueDate": "10/05/2024",
+    "Link": "https://flow-space.github.io/subjects/homeroom/index.html"
   },
   {
     "Class": "English",
     "Task": "bookname book study",
-    "DueDate": "n/a"
+    "DueDate": "n/a",
+    "Link": "https://flow-space.github.io/subjects/homeroom/index.html"
   },
   {
     "Class": "Random task",
     "Task": "blah, blah",
-    "DueDate": "today"
+    "DueDate": "today",
+    "Link": "https://flow-space.github.io/subjects/homeroom/index.html"
   }
 ]
