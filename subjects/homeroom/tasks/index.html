@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://flow-space.github.io/style.css">
+    <title>Your Website</title>
+</head>
+<body>
+    <header>
+        <h1>Flow Space</h1>
+        <h2><a href="https://flow-space.github.io/">Home</a></h2>
+        <h3><!--<a href="">Student Login</a><a href="">Subscribe</a>--></h3>
+        <p>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/homeroom/index.html">Homeroom</a></button>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/english/index.html">English</a></button>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/maths/index.html">Maths</a></button>
+            <button class="section-button"><a href="https://flow-space.github.io/subjects/science/index.html">Science</a></button>
+        </p>
+      <h3>Homeroom Tasks</h3>
+        <p>
+            <a href="https://flow-space.github.io/subjects/homeroom/tasks/">Tasks</a>
+            <a href="https://flow-space.github.io/subjects/homeroom/info">Info</a>
+            <a href="https://flow-space.github.io/subjects/homeroom/help">Help</a>
+            <a href="https://flow-space.github.io/subjects/homeroom/points">Leaderboard/Points</a>
+        </p>
+    </header>
+    <nav id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li><!-- Add more links as needed -->
+        </ul>
+    </nav>
+    <div class="content">
+        <table id="tasklist">
+    <tr>
+      <th>Class</th>
+      <th>Task</th>
+      <th>Due Date</th>
+      <th>Link</th>
+    </tr>
+  </table>
+    </div>
+    <script>
+fetch('https://flow-space.github.io/subjects/homeroom/tasks/tasks.json')
+  .then(response => response.json())
+  .then(data => {
+    // Once the JSON data is retrieved, you can populate the table with it
+    populateTableWithJSONData(data);
+  })
+  .catch(error => {
+    console.error('Error fetching JSON data:', error);
+  });
 
+function populateTableWithJSONData(data) {
+  const table = document.getElementById('tasklist');
+
+  data.forEach(task => {
+    const row = table.insertRow(-1);
+    const classCell = row.insertCell(0);
+    const taskCell = row.insertCell(1);
+    const dueDateCell = row.insertCell(2);
+    const linkCell = row.insertCell(3); // Add a new cell for the link
+
+    classCell.textContent = task.Class;
+    taskCell.textContent = task.Task;
+    dueDateCell.textContent = task.DueDate;
+
+    // Create a hyperlink for the linkCell
+    const link = document.createElement('a');
+    link.textContent = 'Link';
+    link.href = task.Link;
+    link.target = '_blank'; // Open the link in a new tab
+    linkCell.appendChild(link);
+  });
+}
+
+        
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
