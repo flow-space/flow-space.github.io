@@ -38,6 +38,7 @@
       <th>Class</th>
       <th>Task</th>
       <th>Due Date</th>
+        <th>Link</th>
     </tr>
   </table>
     </div>
@@ -52,8 +53,7 @@ fetch('https://flow-space.github.io/subjects/homeroom/tasks/tasks.json')
     console.error('Error fetching JSON data:', error);
   });
 
-  
-    function populateTableWithJSONData(data) {
+function populateTableWithJSONData(data) {
   const table = document.getElementById('tasklist');
 
   data.forEach(task => {
@@ -61,12 +61,21 @@ fetch('https://flow-space.github.io/subjects/homeroom/tasks/tasks.json')
     const classCell = row.insertCell(0);
     const taskCell = row.insertCell(1);
     const dueDateCell = row.insertCell(2);
+    const linkCell = row.insertCell(3); // Add a new cell for the link
 
     classCell.textContent = task.Class;
     taskCell.textContent = task.Task;
     dueDateCell.textContent = task.DueDate;
+
+    // Create a hyperlink for the linkCell
+    const link = document.createElement('a');
+    link.textContent = 'Link';
+    link.href = task.Link;
+    link.target = '_blank'; // Open the link in a new tab
+    linkCell.appendChild(link);
   });
 }
+
         
         function toggleSidebar() {
             document.getElementById("sidebar").classList.toggle("active");
