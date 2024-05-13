@@ -3,18 +3,18 @@
     "Class": "Math",
     "Task": "Area, Perimeter...",
     "DueDate": "10/05/2024",
-    "Link": "https://flow-space.github.io/subjects/homeroom/index.html"
+    "Link": "https://flow-space.github.io/subjects/homeroom/tasks/task1.html"
   },
   {
     "Class": "English",
     "Task": "bookname book study",
     "DueDate": "n/a",
-    "Link": "https://flow-space.github.io/subjects/homeroom/index.html"
+    "Link": "https://flow-space.github.io/subjects/homeroom/tasks/task2.html"
   },
   {
     "Class": "Random task",
     "Task": "blah, blah",
     "DueDate": "today",
-    "Link": "https://flow-space.github.io/subjects/homeroom/index.html"
+    "Link": "https://flow-space.github.io/subjects/homeroom/tasks/task3.html"
   }
 ]
