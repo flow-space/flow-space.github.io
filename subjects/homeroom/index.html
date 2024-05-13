@@ -71,7 +71,7 @@ function populateTableWithJSONData(data) {
     const link = document.createElement('a');
     link.textContent = 'Link';
     link.href = task.Link;
-    link.target = '_blank'; // Open the link in a new tab
+    link.target = '_self';
     linkCell.appendChild(link);
   });
 }
